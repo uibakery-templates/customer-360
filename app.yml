@@ -1,0 +1,20 @@
+storeItemList:
+  - id: '16297176757350.12047374429881308'
+    name: customer
+    value: {}
+    valueType: object
+    initialValue: {}
+metadata:
+  favicon: ''
+  code: ''
+  title: Customer 360
+  description: ''
+  breakpoints: []
+  rendererCachingEnabled: false
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions: {}
+  gridVersion: 2
+  density: compact
+internalType: project

@@ -1,0 +1,1 @@
+return {{ ui.customersTable.selectedRow.data.customerNumber }};

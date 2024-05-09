@@ -1,0 +1,81 @@
+id: '16297165196690.776927863888256'
+name: loadCustomer
+nameConfigured: true
+steps:
+  - id: '16469898739720.4780555934274311'
+    type: condition
+    params:
+      - type: code
+        value: ./16469898739720.4780555934274311.js
+        valueType: interpolatedValue
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '16469898739720.07816601140133472'
+                type: customSQLQuery
+                params:
+                  - type: query
+                    value: ./16469898739720.07816601140133472-query.sql
+                    valueType: interpolatedValue
+                    interpolationType: string
+                  - type: datasourceId
+                    value: PjRm90nI4k
+                    valueType: custom
+                    mustSelectFirst: true
+                  - type: preparedQuery
+                    value: ./16469898739720.07816601140133472-preparedQuery.sql
+                    valueType: interpolatedValue
+                  - type: preparedQueryParams
+                    value:
+                      - >-
+                        __UI_BAKERY__FORMAT_IF_DATE__(
+                        ui.customersTable.selectedRow.data.customerNumber )
+                    valueType: custom
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+              - id: '16469898739720.5102579504075284'
+                type: customAsyncCode
+                params:
+                  - type: asyncCode
+                    value: ./16469898739720.5102579504075284.js
+                    valueType: interpolatedValue
+                level: 1
+                fallthroughError: false
+                isChanged: true
+          - condition: false
+            steps:
+              - id: '16469898739720.29863868412426386'
+                type: customAsyncCode
+                params:
+                  - type: asyncCode
+                    value: ./16469898739720.29863868412426386.js
+                    valueType: interpolatedValue
+                level: 1
+                fallthroughError: false
+                isChanged: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadCustomer.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadCustomer.name}}" successfully executed
+  showErrorToast: false
+  errorToast: Action "{{actions.loadCustomer.name}}" has failed
+  delay: '0'
+  runWhenFirstReferenced: true
+mode: manual
+kind: workflow

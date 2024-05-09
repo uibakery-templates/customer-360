@@ -1,0 +1,1 @@
+return {{ ui.ordersTable.selectedRow.data.orderNumber }};

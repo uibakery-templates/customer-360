@@ -1,0 +1,65 @@
+id: '16297183191290.5015667087078868'
+name: loadCustomerAndOrders
+nameConfigured: true
+steps:
+  - id: '16469898739720.7626489465752047'
+    type: executeAction
+    params:
+      - type: action
+        value: '16297165196690.776927863888256'
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+      - type: customParamsEnabled
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./16469898739720.7626489465752047-customParams.js
+        valueType: interpolatedValue
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '16469898739720.8495425387313458'
+    type: executeAction
+    params:
+      - type: action
+        value: '16297161582460.17507504503846683'
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+      - type: customParamsEnabled
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./16469898739720.8495425387313458-customParams.js
+        valueType: interpolatedValue
+    level: 0
+    fallthroughError: false
+    isChanged: true
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.loadCustomerAndOrders.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadCustomerAndOrders.name}}" successfully executed
+  showErrorToast: false
+  errorToast: Action "{{actions.loadCustomerAndOrders.name}}" has failed
+  delay: '0'
+  runWhenFirstReferenced: true
+mode: manual
+kind: workflow

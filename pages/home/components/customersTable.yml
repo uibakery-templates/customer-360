@@ -1,0 +1,104 @@
+id: '16297160936110.04488408306835456'
+definitionId: smartTable
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 14
+      w: 13
+      h: 86
+properties:
+  name: customersTable
+  title: Customers
+  data: '{{ actions.loadCustomers.data }}'
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadCustomers.loading}}'
+    value: false
+  triggerRowSelectOnInit:
+    value: true
+    dataValue: 'false'
+    withData: false
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  selectRowOnEditButtonClick:
+    value: false
+    dataValue: 'false'
+    withData: false
+  limit: '6'
+  rowHeight: dynamic
+actions:
+  smartTableRowSelect:
+    - action: '16297183191290.5015667087078868'
+      paramCode: ''
+index: 0
+slots:
+  - id: '16297160936120.7853623357860553'
+    name: columns
+    children:
+      - id: '16297160936380.14256205001428368'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber
+          prop: customerNumber
+          primaryKey: true
+          width: 90
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          filterVariation:
+            value: range
+            dataValue: range
+            withData: false
+        parentSlotId: '16297160936120.7853623357860553'
+        index: 0
+        slots: []
+      - id: '16297160936380.38222520707426066'
+        definitionId: atomicString
+        styles: {}
+        properties:
+          name: atomicString
+          prop: customerName
+          primaryKey: false
+          width: 150
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '16297160936120.7853623357860553'
+        index: 1
+        slots: []
+      - id: '16297160936390.27314078821629795'
+        definitionId: atomicString
+        styles: {}
+        properties:
+          name: atomicString2
+          prop: contactLastName
+          primaryKey: false
+          width: 150
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '16297160936120.7853623357860553'
+        index: 2
+        slots: []
+      - id: '16297160936390.1253047008774988'
+        definitionId: atomicString
+        styles: {}
+        properties:
+          name: atomicString3
+          prop: contactFirstName
+          primaryKey: false
+          width: 150
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '16297160936120.7853623357860553'
+        index: 3
+        slots: []

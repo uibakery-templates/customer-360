@@ -1,0 +1,84 @@
+id: '16297162269710.07529812656427315'
+name: loadOrderdetails
+nameConfigured: true
+steps:
+  - id: '16469898739720.25296541739065237'
+    type: condition
+    params:
+      - type: code
+        value: ./16469898739720.25296541739065237.js
+        valueType: interpolatedValue
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '16469898739720.917644560598319'
+                type: LOAD_COLLECTION
+                params:
+                  - type: datasourceId
+                    value: PjRm90nI4k
+                    valueType: string
+                  - type: resourceId
+                    value: c58f5352-5611-4e9e-af5e-e62f67c089f0
+                    valueType: string
+                  - type: filters
+                    value:
+                      - column: orderNumber
+                        operation: '='
+                        value:
+                          value: '{{ ui.ordersTable.selectedRow.data.orderNumber }}'
+                    valueType: custom
+                  - type: ordering
+                    value:
+                      limit:
+                        value: ''
+                      offset:
+                        value: ''
+                      orderBy:
+                        value: ''
+                      orderDirection:
+                        value: asc
+                    valueType: custom
+                  - type: additionalParams
+                    value:
+                      - name: ''
+                        value: ''
+                    valueType: custom
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+          - condition: false
+            steps:
+              - id: '16469898739720.41093740011992597'
+                type: customAsyncCode
+                params:
+                  - type: asyncCode
+                    value: ./16469898739720.41093740011992597.js
+                    valueType: interpolatedValue
+                level: 1
+                fallthroughError: false
+                isChanged: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadOrderdetails.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadOrderdetails.name}}" successfully executed
+  showErrorToast: false
+  errorToast: Action "{{actions.loadOrderdetails.name}}" has failed
+  delay: '0'
+  runWhenFirstReferenced: true
+mode: manual
+kind: workflow

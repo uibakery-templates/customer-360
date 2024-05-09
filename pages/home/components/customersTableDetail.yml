@@ -1,0 +1,204 @@
+id: '16297165953130.11038848978403148'
+definitionId: detail
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 13
+      y: 14
+      w: 11
+      h: 86
+properties:
+  name: customersTableDetail
+  title: >-
+    {{ ui.customersTable.selectedRow.data.customerNumber ? 'Customer #' +
+    ui.customersTable.selectedRow.data.customerNumber : 'Not selected'  }}
+  columns: 2
+  entity: '{{ actions.loadCustomer.data }}'
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+actions: {}
+index: 5
+slots:
+  - id: '16297165953130.8640693543675535'
+    name: structure
+    children:
+      - id: '16297177933760.23302109674798244'
+        definitionId: atomicString
+        parentSlotId: '16297165953130.8640693543675535'
+        styles: {}
+        properties:
+          name: atomicString4
+          prop: addressLine1
+          primaryKey: false
+          width: 150
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []
+      - id: '16297177933760.5396156687465945'
+        definitionId: atomicString
+        parentSlotId: '16297165953130.8640693543675535'
+        styles: {}
+        properties:
+          name: atomicString6
+          prop: city
+          primaryKey: false
+          width: 150
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 3
+        slots: []
+      - id: '16297177933760.5461104962677739'
+        definitionId: atomicSelect
+        parentSlotId: '16297165953130.8640693543675535'
+        styles: {}
+        properties:
+          name: atomicSelect3
+          prop: state
+          primaryKey: false
+          options:
+            value:
+              - value: Victoria
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.2100492739236699'
+              - value: New York
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.042379482200171514'
+              - value: CA
+                color: warning
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.8328086036167826'
+              - value: NY
+                color: danger
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.5076535186352307'
+              - value: PA
+                color: info
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.502866367104776'
+              - value: CT
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.8881673673470396'
+              - value: MA
+                color: primary-400
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.9656757809343655'
+              - value: Osaka
+                color: success-400
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.9687257872829713'
+              - value: BC
+                color: warning-400
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.9433559112788665'
+              - value: Québec
+                color: danger-400
+                __UIBAKERY__SYSTEM_ID__: '16297177880710.8361264246301443'
+            dataValue: |-
+              [
+                {
+                  value: 'Victoria',
+                  color: 'primary'
+                },
+                {
+                  value: 'New York',
+                  color: 'success'
+                },
+                {
+                  value: 'CA',
+                  color: 'warning'
+                },
+                {
+                  value: 'NY',
+                  color: 'danger'
+                },
+                {
+                  value: 'PA',
+                  color: 'info'
+                },
+                {
+                  value: 'CT',
+                  color: 'basic'
+                },
+                {
+                  value: 'MA',
+                  color: 'primary-400'
+                },
+                {
+                  value: 'Osaka',
+                  color: 'success-400'
+                },
+                {
+                  value: 'BC',
+                  color: 'warning-400'
+                },
+                {
+                  value: 'Québec',
+                  color: 'danger-400'
+                }
+              ]
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          allowResetValue:
+            value: false
+            dataValue: 'false'
+            withData: false
+        index: 4
+        slots: []
+      - id: '16297177933750.721666549334607'
+        definitionId: atomicString
+        parentSlotId: '16297165953130.8640693543675535'
+        styles: {}
+        properties:
+          name: atomicString
+          prop: phone
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+      - id: '16297177933760.8802171211242436'
+        definitionId: atomicDateTime
+        parentSlotId: '16297165953130.8640693543675535'
+        styles: {}
+        properties:
+          name: atomicDateTime
+          prop: addressLine2
+          primaryKey: false
+          timeFormat:
+            value: ''
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 2
+        slots: []
+      - id: '16297178404380.522791370902947'
+        definitionId: atomicNumber
+        parentSlotId: '16297165953130.8640693543675535'
+        styles: {}
+        properties:
+          name: atomicNumber
+          prop: postalCode
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 5
+        slots: []
+      - id: '16297178452410.12465907089808348'
+        definitionId: atomicString
+        parentSlotId: '16297165953130.8640693543675535'
+        styles: {}
+        properties:
+          name: atomicString5
+          prop: country
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 6
+        slots: []

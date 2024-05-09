@@ -1,0 +1,131 @@
+id: '16297162880250.8073975896507992'
+definitionId: smartTable
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 13
+      y: 100
+      w: 11
+      h: 80
+properties:
+  name: orderdetailsTable
+  title: >-
+    {{ ui.ordersTable.selectedRow.data.customerNumber ? 'Order #' +
+    ui.ordersTable.selectedRow.data.customerNumber : 'Not selected'  }}
+  data: '{{actions.loadOrderdetails.data}}'
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadOrderdetails.loading}}'
+    value: false
+  triggerRowSelectOnInit:
+    value: true
+    dataValue: 'false'
+    withData: false
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  selectRowOnEditButtonClick:
+    value: false
+    dataValue: 'false'
+    withData: false
+  rowHeight: dynamic
+actions: {}
+index: 4
+slots:
+  - id: '16297162880260.5535271405105393'
+    name: columns
+    children:
+      - id: '16297162881780.7107871611306209'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber7
+          prop: orderNumber
+          primaryKey: true
+          width: 90
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          filterVariation:
+            value: range
+            dataValue: range
+            withData: false
+        parentSlotId: '16297162880260.5535271405105393'
+        index: 0
+        slots: []
+      - id: '16297162881780.14491329574550016'
+        definitionId: atomicString
+        styles: {}
+        properties:
+          name: atomicString10
+          prop: productCode
+          primaryKey: true
+          width: '100'
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '16297162880260.5535271405105393'
+        index: 1
+        slots: []
+      - id: '16297162881780.2617014432648388'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber8
+          prop: quantityOrdered
+          primaryKey: false
+          width: 90
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          filterVariation:
+            value: range
+            dataValue: range
+            withData: false
+          title: Quantity
+        parentSlotId: '16297162880260.5535271405105393'
+        index: 2
+        slots: []
+      - id: '16297162881780.2216337171177778'
+        definitionId: atomicCurrency
+        styles: {}
+        properties:
+          name: atomicCurrency
+          prop: priceEach
+          primaryKey: false
+          width: 150
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          filterVariation:
+            value: range
+            dataValue: range
+            withData: false
+        parentSlotId: '16297162880260.5535271405105393'
+        index: 3
+        slots: []
+      - id: '16297162881780.3194110596213049'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber9
+          prop: orderLineNumber
+          primaryKey: false
+          width: 90
+          filter: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          filterVariation:
+            value: range
+            dataValue: range
+            withData: false
+          title: 'Order line #'
+        parentSlotId: '16297162880260.5535271405105393'
+        index: 4
+        slots: []
